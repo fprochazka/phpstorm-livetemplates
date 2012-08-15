@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <templateSet group="PHP">
-  <template name="thr" value="throw new $END$" description="throw new" toReformat="true" toShortenFQNames="true">
+  <template name="thr" value="throw new $CLASS$;" description="throw new" toReformat="true" toShortenFQNames="true">
+    <variable name="CLASS" expression="classNameComplete()" defaultValue="" alwaysStopAt="true" />
     <context>
       <option name="PHP" value="true" />
       <option name="HTML_TEXT" value="false" />
@@ -117,7 +118,9 @@
       <option name="CSS_RULESET_LIST" value="false" />
     </context>
   </template>
-  <template name="com" value="/***/&#10;protected function createComponent$NAME$()&#10;{&#10;    $END$&#10;}" description="component factory" toReformat="true" toShortenFQNames="true">
+  <template name="com" value="/**&#10; * @return $CLASS$&#10; */&#10;protected function createComponent$NAME$()&#10;{&#10;    return new $CLASS$($ARGS$);$END$&#10;}" description="component factory" toReformat="true" toShortenFQNames="true">
+    <variable name="CLASS" expression="classNameComplete()" defaultValue="" alwaysStopAt="true" />
+    <variable name="ARGS" expression="" defaultValue="" alwaysStopAt="true" />
     <variable name="NAME" expression="" defaultValue="" alwaysStopAt="true" />
     <context>
       <option name="HTML_TEXT" value="false" />
@@ -229,6 +232,47 @@
       <option name="CSS_PROPERTY_VALUE" value="false" />
       <option name="CSS_DECLARATION_BLOCK" value="false" />
       <option name="CSS_RULESET_LIST" value="false" />
+    </context>
+  </template>
+  <template name="fore" value="foreach ($SELECTION$ as $$$VAR_VALUE$) {&#10;    $END$&#10;}&#10;" description="foreach(iterable_expr as $value) {...}" toReformat="true" toShortenFQNames="true">
+    <variable name="SELECTION" expression="" defaultValue="" alwaysStopAt="false" />
+    <variable name="VAR_VALUE" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="PHP" value="true" />
+      <option name="HTML_TEXT" value="false" />
+      <option name="HTML" value="false" />
+      <option name="XSL_TEXT" value="false" />
+      <option name="XML" value="false" />
+      <option name="CSS_PROPERTY_VALUE" value="false" />
+      <option name="CSS_DECLARATION_BLOCK" value="false" />
+      <option name="CSS_RULESET_LIST" value="false" />
+      <option name="CSS" value="false" />
+      <option name="JAVA_SCRIPT" value="false" />
+      <option name="JSP" value="false" />
+      <option name="SQL" value="false" />
+      <option name="HAML" value="false" />
+      <option name="OTHER" value="false" />
+    </context>
+  </template>
+  <template name="forek" value="foreach ($SELECTION$ as $$$VAR_KEY$ =&gt; $$$VAR_VALUE$) {&#10;    $END$&#10;}&#10;" description="foreach(iterable_expr as $key =&gt; $value) {...}" toReformat="true" toShortenFQNames="true">
+    <variable name="SELECTION" expression="" defaultValue="" alwaysStopAt="false" />
+    <variable name="VAR_KEY" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="VAR_VALUE" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="PHP" value="true" />
+      <option name="HTML_TEXT" value="false" />
+      <option name="HTML" value="false" />
+      <option name="XSL_TEXT" value="false" />
+      <option name="XML" value="false" />
+      <option name="CSS_PROPERTY_VALUE" value="false" />
+      <option name="CSS_DECLARATION_BLOCK" value="false" />
+      <option name="CSS_RULESET_LIST" value="false" />
+      <option name="CSS" value="false" />
+      <option name="JAVA_SCRIPT" value="false" />
+      <option name="JSP" value="false" />
+      <option name="SQL" value="false" />
+      <option name="HAML" value="false" />
+      <option name="OTHER" value="false" />
     </context>
   </template>
   <template name="inj" value="/**&#10; * @param $HINT$ $$$SERVICE$&#10; */&#10;public function inject$SERVICE_UPER$($HINT$ $$$SERVICE$)&#10;{&#10;    $this-&gt;$SERVICE$ = $$$SERVICE$;$END$&#10;}" description="inject function" toReformat="true" toShortenFQNames="true">
