@@ -1,45 +1,61 @@
 # PhpStorm Live Templates
 
-## pri, pro, pub
+
+
+## Installation
+
+
+
+## PHP Templates
+
+### pri, pro, pub
 
 Private, protected and public method
 
-## con
+### con
 
 Constructor, that calls parent
 
-## com
-
-Nette component factory
-
-## inj
-
-Inject function for Nette presenter
-
-## sig
-
-Signal method of Nette PresenterComponent
-
-## att
-
-Attached event on Nette component.
-
-## obj
-
-Code for including Nette\ObjectMixin into current class
-
-## test
-
-Default empty test function for PhpUnit (todo: more)
-
-## thr
+### thr
 
 Throw expression
 
-## try
+### try
 
 Surround code with <code>try {}</code> expression
 
-## sta
+### sta
 
 Static function
+
+
+
+## Nette Templates
+
+### com
+
+Nette component factory
+
+### inj
+
+Inject function for Nette presenter
+
+### sig
+
+Signal method of Nette PresenterComponent
+
+### att
+
+Attached event on Nette component.
+
+### obj
+
+Code for including Nette\ObjectMixin into current class
+
+
+
+## PHPUnit Templates
+
+### test
+
+Default empty test function for PhpUnit (todo: more)
