@@ -6,9 +6,9 @@
 
 First, find your configuration folder.
 
-- Windows: <code><your home directory>\.WebIde<version>\config</code>
-- Linux: <code>~\.WebIde<version>\config</code>
-- MacOS: <code>~/Library/Preferences/WebIde<version></code>
+	Windows: <your home directory>\.WebIde<version>\config
+	Linux: ~\.WebIde<version>\config
+	MacOS: ~/Library/Preferences/WebIde<version>
 
 On my linux, it would be <code>~/.WebIde50/config</code> so you have to adjust commands to your platform. There is a <code>templates/</code> directory. It contains XML files with Live Templates.
 
