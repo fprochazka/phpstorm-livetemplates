@@ -99,7 +99,7 @@
       <option name="CSS_RULESET_LIST" value="false" />
     </context>
   </template>
-  <template name="con" value="/***/&#10;public function __construct($ARGS$)&#10;{&#10;    parent::__construct();&#10;&#10;    $END$&#10;}" description="constructor" toReformat="true" toShortenFQNames="true">
+  <template name="con" value="/***/&#10;public function __construct($ARGS$)&#10;{&#10;    parent::__construct();&#10;    $END$&#10;}" description="constructor" toReformat="true" toShortenFQNames="true">
     <variable name="ARGS" expression="" defaultValue="" alwaysStopAt="true" />
     <context>
       <option name="HTML_TEXT" value="false" />
