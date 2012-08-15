@@ -4,7 +4,13 @@
 
 ## Installation
 
-Find your configuration folder. On linux, it would be <code>~/.WebIde50/config</code>. There is a <code>templates/</code> directory. It contains XML files with Live Templates.
+First, find your configuration folder.
+
+- Windows: <your home directory>\.WebIde<version>\config
+- Linux: ~\.WebIde<version>\config
+- MacOS: ~/Library/Preferences/WebIde<version>
+
+On my linux, it would be <code>~/.WebIde50/config</code> so you have to adjust commands to your platform. There is a <code>templates/</code> directory. It contains XML files with Live Templates.
 
 If you don't have your own templates yet, there would be no files. So you can remove it and clone new one.
 
