@@ -1,44 +1,32 @@
 # PhpStorm Live Templates
 
-## att
+## pri, pro, pub
 
-Attached event on Nette component.
-
-## com
-
-Nette component factory
+Private, protected and public method
 
 ## con
 
 Constructor, that calls parent
 
+## com
+
+Nette component factory
+
 ## inj
 
 Inject function for Nette presenter
-
-## obj
-
-Code for including Nette\ObjectMixin into current class
-
-## pri
-
-Private method
-
-## pro
-
-Protected method
-
-## pub
-
-Public method
 
 ## sig
 
 Signal method of Nette PresenterComponent
 
-## sta
+## att
 
-Static function
+Attached event on Nette component.
+
+## obj
+
+Code for including Nette\ObjectMixin into current class
 
 ## test
 
@@ -51,3 +39,7 @@ Throw expression
 ## try
 
 Surround code with <code>try {}</code> expression
+
+## sta
+
+Static function
