@@ -53,6 +53,15 @@ Throw expression
 
 Surround code with <code>try {}</code> expression
 
+
+### ob
+
+Surround code with output buffering
+
+### fc
+
+Surround statement with function call
+
 ### sta
 
 Static function
