@@ -28,9 +28,10 @@ If you have your own templates try creating a git repository and pull templates.
 If this wouldn't work. You should just backup your templates, clone the repo and merge them manually.
 
 
-## Shortcuts
+## Default Shortcuts
 
-The default shortcuts are Insert Live Template - <code>CTRL+J</code> and Surround with Live Template - <code>CTRL+ALT+J</code>
+* Insert Live Template - <code>CTRL+J</code>
+* Surround with Live Template - <code>CTRL+ALT+J</code>
 
 
 
