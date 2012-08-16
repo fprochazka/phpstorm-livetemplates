@@ -118,9 +118,10 @@
       <option name="CSS_RULESET_LIST" value="false" />
     </context>
   </template>
-  <template name="sta" value="/***/&#10;public static function $NAME$($ARGS$)&#10;{&#10;    $END$&#10;}" description="static function" toReformat="true" toShortenFQNames="true">
+  <template name="sta" value="/***/&#10;$VISIBILITY$ static function $NAME$($ARGS$)&#10;{&#10;    $END$&#10;}" description="static function" toReformat="true" toShortenFQNames="true">
     <variable name="NAME" expression="" defaultValue="" alwaysStopAt="true" />
     <variable name="ARGS" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="VISIBILITY" expression="enum(&quot;public&quot;, &quot;protected&quot;, &quot;private&quot;)" defaultValue="public" alwaysStopAt="true" />
     <context>
       <option name="HTML_TEXT" value="false" />
       <option name="HTML" value="false" />
