@@ -98,5 +98,84 @@
       <option name="CSS_RULESET_LIST" value="false" />
     </context>
   </template>
+  <template name="sup" value="protected function startup()&#10;{&#10;    parent::startup();&#10;&#10;    $END$&#10;}" description="startup method" toReformat="true" toShortenFQNames="true">
+    <context>
+      <option name="HTML_TEXT" value="false" />
+      <option name="HTML" value="false" />
+      <option name="XSL_TEXT" value="false" />
+      <option name="XML" value="false" />
+      <option name="CSS" value="false" />
+      <option name="JAVA_SCRIPT" value="false" />
+      <option name="JSP" value="false" />
+      <option name="SQL" value="false" />
+      <option name="PHP" value="true" />
+      <option name="HAML" value="false" />
+      <option name="OTHER" value="false" />
+      <option name="CSS_PROPERTY_VALUE" value="false" />
+      <option name="CSS_DECLARATION_BLOCK" value="false" />
+      <option name="CSS_RULESET_LIST" value="false" />
+    </context>
+  </template>
+  <template name="form" value="/**&#10; * @return $FORM_CLASS$&#10; */&#10;protected function createComponent$NAME$()&#10;{&#10;&#9;$$form = new $FORM_CLASS$();&#10;&#9;$END$&#10;&#10;    $$form-&gt;addSubmit(&quot;send&quot;, &quot;Odeslat&quot;);&#10;&#9;$$form-&gt;onSuccess[] = $this-&gt;$HANDLER$FormSubmitted;&#10;&#10;&#9;return $$form;&#10;}&#10;&#10;&#10;&#10;/**&#10; * @param $FORM_CLASS$ $$form&#10; */&#10;public function $HANDLER$FormSubmitted($FORM_CLASS$ $$form)&#10;{&#10;&#9;throw new Nette\NotImplementedException;&#10;}" description="Form component factory + handler" toReformat="false" toShortenFQNames="true">
+    <variable name="NAME" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="FORM_CLASS" expression="enum(&quot;Form&quot;, &quot;UI\\Form&quot;, &quot;Nette\\Application\\UI\\Form&quot;)" defaultValue="Form" alwaysStopAt="true" />
+    <variable name="HANDLER" expression="decapitalize(NAME)" defaultValue="" alwaysStopAt="false" />
+    <context>
+      <option name="HTML_TEXT" value="false" />
+      <option name="HTML" value="false" />
+      <option name="XSL_TEXT" value="false" />
+      <option name="XML" value="false" />
+      <option name="CSS" value="false" />
+      <option name="JAVA_SCRIPT" value="false" />
+      <option name="JSP" value="false" />
+      <option name="SQL" value="false" />
+      <option name="PHP" value="true" />
+      <option name="HAML" value="false" />
+      <option name="OTHER" value="false" />
+      <option name="CSS_PROPERTY_VALUE" value="false" />
+      <option name="CSS_DECLARATION_BLOCK" value="false" />
+      <option name="CSS_RULESET_LIST" value="false" />
+    </context>
+  </template>
+  <template name="ren" value="public function render$VIEW$($PARAMS$)&#10;{&#10;&#9;$END$&#10;}" description="Render method" toReformat="false" toShortenFQNames="true">
+    <variable name="VIEW" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="PARAMS" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="HTML_TEXT" value="false" />
+      <option name="HTML" value="false" />
+      <option name="XSL_TEXT" value="false" />
+      <option name="XML" value="false" />
+      <option name="CSS" value="false" />
+      <option name="JAVA_SCRIPT" value="false" />
+      <option name="JSP" value="false" />
+      <option name="SQL" value="false" />
+      <option name="PHP" value="true" />
+      <option name="HAML" value="false" />
+      <option name="OTHER" value="false" />
+      <option name="CSS_PROPERTY_VALUE" value="false" />
+      <option name="CSS_DECLARATION_BLOCK" value="false" />
+      <option name="CSS_RULESET_LIST" value="false" />
+    </context>
+  </template>
+  <template name="act" value="public function action$ACTION$($PARAMS$)&#10;{&#10;&#9;$END$&#10;}" description="Action method" toReformat="false" toShortenFQNames="true">
+    <variable name="ACTION" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="PARAMS" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="HTML_TEXT" value="false" />
+      <option name="HTML" value="false" />
+      <option name="XSL_TEXT" value="false" />
+      <option name="XML" value="false" />
+      <option name="CSS" value="false" />
+      <option name="JAVA_SCRIPT" value="false" />
+      <option name="JSP" value="false" />
+      <option name="SQL" value="false" />
+      <option name="PHP" value="true" />
+      <option name="HAML" value="false" />
+      <option name="OTHER" value="false" />
+      <option name="CSS_PROPERTY_VALUE" value="false" />
+      <option name="CSS_DECLARATION_BLOCK" value="false" />
+      <option name="CSS_RULESET_LIST" value="false" />
+    </context>
+  </template>
 </templateSet>
 

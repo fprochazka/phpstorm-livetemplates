@@ -78,9 +78,21 @@ The <code>$VISIBILITY$</code> variable within live template uses <code>enum()</c
 
 Nette component factory
 
+### form
+
+Component factory with basic Form definition and signal handler
+
+### ren, act
+
+Render and action method
+
 ### inj
 
 Inject function for Nette presenter
+
+### sup
+
+Startup method
 
 ### sig
 
