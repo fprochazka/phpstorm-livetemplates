@@ -51,6 +51,10 @@ Surround code with <code>try {}</code> expression
 
 Static function
 
+The <code>$VISIBILITY$</code> variable within live template uses <code>enum()</code> helper, so you can choose visibility easily
+
+![enum](https://dl.dropbox.com/u/32120652/phpstorm-livetemplate-visibilityselect.png)
+
 
 
 ## Nette Templates
