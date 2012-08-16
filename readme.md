@@ -88,7 +88,7 @@ Render and action method
 
 ### inj
 
-Inject function for Nette presenter
+Inject method for Nette presenter
 
 ### sup
 
