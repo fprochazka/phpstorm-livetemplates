@@ -101,3 +101,11 @@ Code for including Nette\ObjectMixin into current class
 ### test
 
 Default empty test function for PhpUnit (todo: more)
+
+
+
+## jQuery Templates
+
+### fn
+
+Common pattern for creating jQuery modules
