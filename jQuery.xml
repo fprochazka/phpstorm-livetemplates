@@ -9,20 +9,13 @@
     <variable name="METHOD" expression="" defaultValue="" alwaysStopAt="true" />
     <variable name="ARGS" expression="" defaultValue="" alwaysStopAt="true" />
     <context>
-      <option name="HTML_TEXT" value="false" />
-      <option name="HTML" value="false" />
-      <option name="XSL_TEXT" value="false" />
-      <option name="XML" value="false" />
-      <option name="CSS_PROPERTY_VALUE" value="false" />
-      <option name="CSS_DECLARATION_BLOCK" value="false" />
-      <option name="CSS_RULESET_LIST" value="false" />
-      <option name="CSS" value="false" />
       <option name="JAVA_SCRIPT" value="true" />
-      <option name="JSP" value="false" />
-      <option name="SQL" value="false" />
-      <option name="PHP" value="false" />
-      <option name="HAML" value="false" />
-      <option name="OTHER" value="false" />
+    </context>
+  </template>
+  <template name="proxy" value="$.proxy($SELECTION$, this)" description="Proxy call" toReformat="false" toShortenFQNames="true">
+    <variable name="SELECTION" expression="" defaultValue="" alwaysStopAt="false" />
+    <context>
+      <option name="JAVA_SCRIPT" value="true" />
     </context>
   </template>
 </templateSet>
