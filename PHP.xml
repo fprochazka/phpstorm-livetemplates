@@ -64,8 +64,15 @@
       <option name="PHP" value="true" />
     </context>
   </template>
-  <template name="fc" value="$CALL$($SELECTION$);$END$" description="function call" toReformat="false" toShortenFQNames="true">
+  <template name="fc" value="$CALL$($SELECTION$)$END$" description="function call" toReformat="false" toShortenFQNames="true">
     <variable name="CALL" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="SELECTION" expression="" defaultValue="" alwaysStopAt="false" />
+    <context>
+      <option name="PHP" value="true" />
+    </context>
+  </template>
+  <template name="if" value="if ($COND$) {&#10;&#9;$SELECTION$&#10;}$END$" description="if wrap" toReformat="true" toShortenFQNames="true">
+    <variable name="COND" expression="" defaultValue="" alwaysStopAt="true" />
     <variable name="SELECTION" expression="" defaultValue="" alwaysStopAt="false" />
     <context>
       <option name="PHP" value="true" />
