@@ -2,40 +2,112 @@
 <templateSet group="PHP">
   <template name="thr" value="throw new $CLASS$;" description="throw new" toReformat="true" toShortenFQNames="true">
     <variable name="CLASS" expression="classNameComplete()" defaultValue="" alwaysStopAt="true" />
-    <context />
+    <context>
+      <option name="HTML_TEXT" value="false" />
+      <option name="HTML" value="false" />
+      <option name="XSL_TEXT" value="false" />
+      <option name="XML" value="false" />
+      <option name="CSS_PROPERTY_VALUE" value="false" />
+      <option name="CSS_DECLARATION_BLOCK" value="false" />
+      <option name="CSS_RULESET_LIST" value="false" />
+      <option name="CSS" value="false" />
+      <option name="JAVA_SCRIPT" value="false" />
+      <option name="TypeScript" value="false" />
+      <option name="SQL" value="false" />
+      <option name="OTHER" value="false" />
+    </context>
   </template>
   <template name="try" value="try {&#10;&#9;$SELECTION$&#10;&#10;} catch ($EXCEPTION_TYPE$ $e) {&#10;&#9;$END$&#10;}&#10;" description="try {} catch () {}" toReformat="true" toShortenFQNames="true">
     <variable name="SELECTION" expression="" defaultValue="" alwaysStopAt="false" />
     <variable name="EXCEPTION_TYPE" expression="classNameComplete()" defaultValue="Exception" alwaysStopAt="true" />
     <context>
+      <option name="HTML_TEXT" value="false" />
+      <option name="HTML" value="false" />
+      <option name="XSL_TEXT" value="false" />
+      <option name="XML" value="false" />
+      <option name="CSS_PROPERTY_VALUE" value="false" />
+      <option name="CSS_DECLARATION_BLOCK" value="false" />
+      <option name="CSS_RULESET_LIST" value="false" />
+      <option name="CSS" value="false" />
+      <option name="JAVA_SCRIPT" value="false" />
+      <option name="TypeScript" value="false" />
+      <option name="SQL" value="false" />
       <option name="PHP" value="true" />
+      <option name="OTHER" value="false" />
     </context>
   </template>
   <template name="pub" value="/***/&#10;public function $NAME$($ARGS$)&#10;{&#10;    $END$&#10;}" description="public function" toReformat="true" toShortenFQNames="true">
     <variable name="NAME" expression="" defaultValue="" alwaysStopAt="true" />
     <variable name="ARGS" expression="" defaultValue="" alwaysStopAt="true" />
     <context>
+      <option name="HTML_TEXT" value="false" />
+      <option name="HTML" value="false" />
+      <option name="XSL_TEXT" value="false" />
+      <option name="XML" value="false" />
+      <option name="CSS_PROPERTY_VALUE" value="false" />
+      <option name="CSS_DECLARATION_BLOCK" value="false" />
+      <option name="CSS_RULESET_LIST" value="false" />
+      <option name="CSS" value="false" />
+      <option name="JAVA_SCRIPT" value="false" />
+      <option name="TypeScript" value="false" />
+      <option name="SQL" value="false" />
       <option name="PHP" value="true" />
+      <option name="OTHER" value="false" />
     </context>
   </template>
   <template name="pro" value="/***/&#10;protected function $NAME$($ARGS$)&#10;{&#10;    $END$&#10;}" description="protected function" toReformat="true" toShortenFQNames="true">
     <variable name="NAME" expression="" defaultValue="" alwaysStopAt="true" />
     <variable name="ARGS" expression="" defaultValue="" alwaysStopAt="true" />
     <context>
+      <option name="HTML_TEXT" value="false" />
+      <option name="HTML" value="false" />
+      <option name="XSL_TEXT" value="false" />
+      <option name="XML" value="false" />
+      <option name="CSS_PROPERTY_VALUE" value="false" />
+      <option name="CSS_DECLARATION_BLOCK" value="false" />
+      <option name="CSS_RULESET_LIST" value="false" />
+      <option name="CSS" value="false" />
+      <option name="JAVA_SCRIPT" value="false" />
+      <option name="TypeScript" value="false" />
+      <option name="SQL" value="false" />
       <option name="PHP" value="true" />
+      <option name="OTHER" value="false" />
     </context>
   </template>
   <template name="pri" value="/***/&#10;private function $NAME$($ARGS$)&#10;{&#10;    $END$&#10;}" description="private function" toReformat="true" toShortenFQNames="true">
     <variable name="NAME" expression="" defaultValue="" alwaysStopAt="true" />
     <variable name="ARGS" expression="" defaultValue="" alwaysStopAt="true" />
     <context>
+      <option name="HTML_TEXT" value="false" />
+      <option name="HTML" value="false" />
+      <option name="XSL_TEXT" value="false" />
+      <option name="XML" value="false" />
+      <option name="CSS_PROPERTY_VALUE" value="false" />
+      <option name="CSS_DECLARATION_BLOCK" value="false" />
+      <option name="CSS_RULESET_LIST" value="false" />
+      <option name="CSS" value="false" />
+      <option name="JAVA_SCRIPT" value="false" />
+      <option name="TypeScript" value="false" />
+      <option name="SQL" value="false" />
       <option name="PHP" value="true" />
+      <option name="OTHER" value="false" />
     </context>
   </template>
-  <template name="con" value="/***/&#10;public function __construct($ARGS$)&#10;{&#10;    parent::__construct();&#10;    $END$&#10;}" description="constructor" toReformat="true" toShortenFQNames="true">
-    <variable name="ARGS" expression="" defaultValue="" alwaysStopAt="true" />
+  <template name="con" value="public function __construct($END$)&#10;{&#10;}" description="constructor" toReformat="true" toShortenFQNames="true">
     <context>
+      <option name="HTML_TEXT" value="false" />
+      <option name="HTML" value="false" />
+      <option name="XSL_TEXT" value="false" />
+      <option name="XML" value="false" />
+      <option name="CSS_PROPERTY_VALUE" value="false" />
+      <option name="CSS_DECLARATION_BLOCK" value="false" />
+      <option name="CSS_RULESET_LIST" value="false" />
+      <option name="CSS" value="false" />
+      <option name="JAVA_SCRIPT" value="false" />
+      <option name="TypeScript" value="false" />
+      <option name="SQL" value="false" />
       <option name="PHP" value="true" />
+      <option name="OTHER" value="false" />
     </context>
   </template>
   <template name="sta" value="/***/&#10;$VISIBILITY$ static function $NAME$($ARGS$)&#10;{&#10;    $END$&#10;}" description="static function" toReformat="true" toShortenFQNames="true">
@@ -43,39 +115,113 @@
     <variable name="ARGS" expression="" defaultValue="" alwaysStopAt="true" />
     <variable name="VISIBILITY" expression="enum(&quot;public&quot;, &quot;protected&quot;, &quot;private&quot;)" defaultValue="public" alwaysStopAt="true" />
     <context>
+      <option name="HTML_TEXT" value="false" />
+      <option name="HTML" value="false" />
+      <option name="XSL_TEXT" value="false" />
+      <option name="XML" value="false" />
+      <option name="CSS_PROPERTY_VALUE" value="false" />
+      <option name="CSS_DECLARATION_BLOCK" value="false" />
+      <option name="CSS_RULESET_LIST" value="false" />
+      <option name="CSS" value="false" />
+      <option name="JAVA_SCRIPT" value="false" />
+      <option name="TypeScript" value="false" />
+      <option name="SQL" value="false" />
       <option name="PHP" value="true" />
+      <option name="OTHER" value="false" />
     </context>
   </template>
   <template name="fore" value="foreach ($SELECTION$ as $$$VAR_VALUE$) {&#10;    $END$&#10;}&#10;" description="foreach(iterable_expr as $value) {...}" toReformat="true" toShortenFQNames="true">
     <variable name="SELECTION" expression="" defaultValue="" alwaysStopAt="false" />
     <variable name="VAR_VALUE" expression="" defaultValue="" alwaysStopAt="true" />
-    <context />
+    <context>
+      <option name="HTML_TEXT" value="false" />
+      <option name="HTML" value="false" />
+      <option name="XSL_TEXT" value="false" />
+      <option name="XML" value="false" />
+      <option name="CSS_PROPERTY_VALUE" value="false" />
+      <option name="CSS_DECLARATION_BLOCK" value="false" />
+      <option name="CSS_RULESET_LIST" value="false" />
+      <option name="CSS" value="false" />
+      <option name="JAVA_SCRIPT" value="false" />
+      <option name="TypeScript" value="false" />
+      <option name="SQL" value="false" />
+      <option name="OTHER" value="false" />
+    </context>
   </template>
   <template name="forek" value="foreach ($SELECTION$ as $$$VAR_KEY$ =&gt; $$$VAR_VALUE$) {&#10;    $END$&#10;}&#10;" description="foreach(iterable_expr as $key =&gt; $value) {...}" toReformat="true" toShortenFQNames="true">
     <variable name="SELECTION" expression="" defaultValue="" alwaysStopAt="false" />
     <variable name="VAR_KEY" expression="" defaultValue="" alwaysStopAt="true" />
     <variable name="VAR_VALUE" expression="" defaultValue="" alwaysStopAt="true" />
-    <context />
+    <context>
+      <option name="HTML_TEXT" value="false" />
+      <option name="HTML" value="false" />
+      <option name="XSL_TEXT" value="false" />
+      <option name="XML" value="false" />
+      <option name="CSS_PROPERTY_VALUE" value="false" />
+      <option name="CSS_DECLARATION_BLOCK" value="false" />
+      <option name="CSS_RULESET_LIST" value="false" />
+      <option name="CSS" value="false" />
+      <option name="JAVA_SCRIPT" value="false" />
+      <option name="TypeScript" value="false" />
+      <option name="SQL" value="false" />
+      <option name="OTHER" value="false" />
+    </context>
   </template>
   <template name="ob" value="ob_start();&#10;$SELECTION$&#10;$END_FN$();$END$" description="output buffering" toReformat="false" toShortenFQNames="true">
     <variable name="SELECTION" expression="" defaultValue="" alwaysStopAt="false" />
     <variable name="END_FN" expression="enum(&quot;ob_get_clean&quot;, &quot;ob_get_contents&quot;, &quot;ob_get_flush&quot;, &quot;ob_end_flush&quot;, &quot;ob_end_clean&quot;)" defaultValue="ob_get_clean" alwaysStopAt="true" />
     <context>
+      <option name="HTML_TEXT" value="false" />
+      <option name="HTML" value="false" />
+      <option name="XSL_TEXT" value="false" />
+      <option name="XML" value="false" />
+      <option name="CSS_PROPERTY_VALUE" value="false" />
+      <option name="CSS_DECLARATION_BLOCK" value="false" />
+      <option name="CSS_RULESET_LIST" value="false" />
+      <option name="CSS" value="false" />
+      <option name="JAVA_SCRIPT" value="false" />
+      <option name="TypeScript" value="false" />
+      <option name="SQL" value="false" />
       <option name="PHP" value="true" />
+      <option name="OTHER" value="false" />
     </context>
   </template>
   <template name="fc" value="$CALL$($SELECTION$)$END$" description="function call" toReformat="false" toShortenFQNames="true">
     <variable name="CALL" expression="" defaultValue="" alwaysStopAt="true" />
     <variable name="SELECTION" expression="" defaultValue="" alwaysStopAt="false" />
     <context>
+      <option name="HTML_TEXT" value="false" />
+      <option name="HTML" value="false" />
+      <option name="XSL_TEXT" value="false" />
+      <option name="XML" value="false" />
+      <option name="CSS_PROPERTY_VALUE" value="false" />
+      <option name="CSS_DECLARATION_BLOCK" value="false" />
+      <option name="CSS_RULESET_LIST" value="false" />
+      <option name="CSS" value="false" />
+      <option name="JAVA_SCRIPT" value="false" />
+      <option name="TypeScript" value="false" />
+      <option name="SQL" value="false" />
       <option name="PHP" value="true" />
+      <option name="OTHER" value="false" />
     </context>
   </template>
   <template name="if" value="if ($COND$) {&#10;&#9;$SELECTION$&#10;}$END$" description="if wrap" toReformat="true" toShortenFQNames="true">
     <variable name="COND" expression="" defaultValue="" alwaysStopAt="true" />
     <variable name="SELECTION" expression="" defaultValue="" alwaysStopAt="false" />
     <context>
+      <option name="HTML_TEXT" value="false" />
+      <option name="HTML" value="false" />
+      <option name="XSL_TEXT" value="false" />
+      <option name="XML" value="false" />
+      <option name="CSS_PROPERTY_VALUE" value="false" />
+      <option name="CSS_DECLARATION_BLOCK" value="false" />
+      <option name="CSS_RULESET_LIST" value="false" />
+      <option name="CSS" value="false" />
+      <option name="JAVA_SCRIPT" value="false" />
+      <option name="TypeScript" value="false" />
+      <option name="SQL" value="false" />
       <option name="PHP" value="true" />
+      <option name="OTHER" value="false" />
     </context>
   </template>
 </templateSet>
