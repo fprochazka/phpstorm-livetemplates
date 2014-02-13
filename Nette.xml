@@ -246,5 +246,24 @@
       <option name="OTHER" value="false" />
     </context>
   </template>
+  <template name="awc" value="protected function createComponent$NAME$($FACTORY$ $factory)&#10;{&#10;&#9;$control = $factory-&gt;create();&#10;&#9;return $control;$END$&#10;}&#10;" description="autowired component factory" toReformat="false" toShortenFQNames="true">
+    <variable name="FACTORY" expression="classNameComplete()" defaultValue="" alwaysStopAt="true" />
+    <variable name="NAME" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="HTML_TEXT" value="false" />
+      <option name="HTML" value="false" />
+      <option name="XSL_TEXT" value="false" />
+      <option name="XML" value="false" />
+      <option name="CSS_PROPERTY_VALUE" value="false" />
+      <option name="CSS_DECLARATION_BLOCK" value="false" />
+      <option name="CSS_RULESET_LIST" value="false" />
+      <option name="CSS" value="false" />
+      <option name="JAVA_SCRIPT" value="false" />
+      <option name="TypeScript" value="false" />
+      <option name="SQL" value="false" />
+      <option name="PHP" value="true" />
+      <option name="OTHER" value="false" />
+    </context>
+  </template>
 </templateSet>
 
