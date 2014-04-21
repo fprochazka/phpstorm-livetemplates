@@ -123,5 +123,42 @@
       <option name="OTHER" value="true" />
     </context>
   </template>
+  <template name="sti" value="@ORM\InheritanceType(&quot;SINGLE_TABLE&quot;)&#10; * @ORM\DiscriminatorColumn(name=&quot;type&quot;, type=&quot;string&quot;, length=10)&#10; * @ORM\DiscriminatorMap({&#10; *    &quot;post&quot; = &quot;Post&quot;&#10; * })" description="Single table inheritance discriminator definition" toReformat="true" toShortenFQNames="true">
+    <context>
+      <option name="HTML_TEXT" value="false" />
+      <option name="HTML" value="false" />
+      <option name="XSL_TEXT" value="false" />
+      <option name="XML" value="false" />
+      <option name="SQL" value="false" />
+      <option name="CSS_PROPERTY_VALUE" value="false" />
+      <option name="CSS_DECLARATION_BLOCK" value="false" />
+      <option name="CSS_RULESET_LIST" value="false" />
+      <option name="CSS" value="false" />
+      <option name="JAVA_SCRIPT" value="false" />
+      <option name="TypeScript" value="false" />
+      <option name="PHP" value="false" />
+      <option name="PHP Comment" value="true" />
+      <option name="OTHER" value="false" />
+    </context>
+  </template>
+  <template name="ent" value="@ORM\Entity()&#10; * @ORM\Table(name=&quot;$TABLE_NAME$&quot;)" description="Entity header" toReformat="true" toShortenFQNames="true">
+    <variable name="TABLE_NAME" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="HTML_TEXT" value="false" />
+      <option name="HTML" value="false" />
+      <option name="XSL_TEXT" value="false" />
+      <option name="XML" value="false" />
+      <option name="SQL" value="false" />
+      <option name="CSS_PROPERTY_VALUE" value="false" />
+      <option name="CSS_DECLARATION_BLOCK" value="false" />
+      <option name="CSS_RULESET_LIST" value="false" />
+      <option name="CSS" value="false" />
+      <option name="JAVA_SCRIPT" value="false" />
+      <option name="TypeScript" value="false" />
+      <option name="PHP" value="false" />
+      <option name="PHP Comment" value="true" />
+      <option name="OTHER" value="false" />
+    </context>
+  </template>
 </templateSet>
 
