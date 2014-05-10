@@ -10,13 +10,13 @@ First, find your configuration folder.
 	Linux: ~\.WebIde<version>\config
 	MacOS: ~/Library/Preferences/WebIde<version>
 
-On my linux, it would be <code>~/.WebIde50/config</code> so you have to adjust commands to your platform. There is a <code>templates/</code> directory. It contains XML files with Live Templates.
+On my linux, it would be <code>~/.WebIde70/config</code> so you have to adjust commands to your platform. There is a <code>templates/</code> directory. It contains XML files with Live Templates.
 
 If you don't have your own templates yet, there would be no files. So you can remove it and clone new one.
 
-	$ cd ~/.WebIde50/config/
-    $ rm -r templates/
-    $ git clone https://github.com/fprochazka/phpstorm-livetemplates templates
+	$ cd ~/.WebIde70/config/
+	$ rm -r templates/
+	$ git clone https://github.com/fprochazka/phpstorm-livetemplates templates
 
 If you have your own templates try creating a git repository and pull templates.
 
