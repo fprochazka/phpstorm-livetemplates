@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<templateSet group="PHPUnit">
+<templateSet group="fprochazka PHPUnit">
   <template name="test" value="/***/&#10;public function test$NAME$()&#10;{&#10;    $this-&gt;fail();$END$&#10;}" description="test function" toReformat="true" toShortenFQNames="true">
     <variable name="NAME" expression="" defaultValue="" alwaysStopAt="true" />
     <context>

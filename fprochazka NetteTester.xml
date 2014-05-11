@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<templateSet group="NetteTester">
+<templateSet group="fprochazka NetteTester">
   <template name="ass" value="Assert::$METHOD$;$END$" description="Assert" toReformat="true" toShortenFQNames="true">
     <variable name="METHOD" expression="complete()" defaultValue="" alwaysStopAt="true" />
     <context>
