@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<templateSet group="PHP">
+<templateSet group="fprochazka PHP">
   <template name="thr" value="throw new $CLASS$;" description="throw new" toReformat="true" toShortenFQNames="true">
     <variable name="CLASS" expression="classNameComplete()" defaultValue="" alwaysStopAt="true" />
     <context>

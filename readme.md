@@ -12,20 +12,18 @@ First, find your configuration folder.
 
 On my linux, it would be <code>~/.WebIde70/config</code> so you have to adjust commands to your platform. There is a <code>templates/</code> directory. It contains XML files with Live Templates.
 
-If you don't have your own templates yet, there would be no files. So you can remove it and clone new one.
+Thanks to own namespace you can just clone repo.
 
-	$ cd ~/.WebIde70/config/
-	$ rm -r templates/
-	$ git clone https://github.com/fprochazka/phpstorm-livetemplates templates
+	$ cd ~/.WebIde70/config/templates/
+	$ git clone https://github.com/fprochazka/phpstorm-livetemplates .
 
-If you have your own templates try creating a git repository and pull templates.
 
-	$ cd ~/.WebIde50/config/templates/
-	$ git init
-	$ git remote add origin git://github.com/fprochazka/phpstorm-livetemplates.git
-	$ git pull origin master
+Note: If you already have your own git repo in `/templates`, use wget to download `master.zip`.
 
-If this wouldn't work. You should just backup your templates, clone the repo and merge them manually.
+	$ wget https://github.com/fprochazka/phpstorm-livetemplates/archive/master.zip
+	$ unzip master.zip
+	$ mv phpstorm-livetemplates-master/* .
+	$ rm -r phpstorm-livetemplates-master
 
 
 ## Default Shortcuts
