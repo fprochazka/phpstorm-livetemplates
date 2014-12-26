@@ -1,4 +1,3 @@
-<?xml version="1.0" encoding="UTF-8"?>
 <templateSet group="Nette">
   <template name="com" value="/**&#10; * @return $CLASS$&#10; */&#10;protected function createComponent$NAME$()&#10;{&#10;    return new $CLASS$($ARGS$);$END$&#10;}" description="component factory" toReformat="true" toShortenFQNames="true">
     <variable name="CLASS" expression="classNameComplete()" defaultValue="" alwaysStopAt="true" />
@@ -9,13 +8,13 @@
       <option name="HTML" value="false" />
       <option name="XSL_TEXT" value="false" />
       <option name="XML" value="false" />
+      <option name="SQL" value="false" />
       <option name="CSS_PROPERTY_VALUE" value="false" />
       <option name="CSS_DECLARATION_BLOCK" value="false" />
       <option name="CSS_RULESET_LIST" value="false" />
       <option name="CSS" value="false" />
       <option name="JAVA_SCRIPT" value="false" />
       <option name="TypeScript" value="false" />
-      <option name="SQL" value="false" />
       <option name="PHP" value="true" />
       <option name="OTHER" value="false" />
     </context>
@@ -28,13 +27,13 @@
       <option name="HTML" value="false" />
       <option name="XSL_TEXT" value="false" />
       <option name="XML" value="false" />
+      <option name="SQL" value="false" />
       <option name="CSS_PROPERTY_VALUE" value="false" />
       <option name="CSS_DECLARATION_BLOCK" value="false" />
       <option name="CSS_RULESET_LIST" value="false" />
       <option name="CSS" value="false" />
       <option name="JAVA_SCRIPT" value="false" />
       <option name="TypeScript" value="false" />
-      <option name="SQL" value="false" />
       <option name="PHP" value="true" />
       <option name="OTHER" value="false" />
     </context>
@@ -45,13 +44,13 @@
       <option name="HTML" value="false" />
       <option name="XSL_TEXT" value="false" />
       <option name="XML" value="false" />
+      <option name="SQL" value="false" />
       <option name="CSS_PROPERTY_VALUE" value="false" />
       <option name="CSS_DECLARATION_BLOCK" value="false" />
       <option name="CSS_RULESET_LIST" value="false" />
       <option name="CSS" value="false" />
       <option name="JAVA_SCRIPT" value="false" />
       <option name="TypeScript" value="false" />
-      <option name="SQL" value="false" />
       <option name="PHP" value="true" />
       <option name="OTHER" value="false" />
     </context>
@@ -62,33 +61,32 @@
       <option name="HTML" value="false" />
       <option name="XSL_TEXT" value="false" />
       <option name="XML" value="false" />
+      <option name="SQL" value="false" />
       <option name="CSS_PROPERTY_VALUE" value="false" />
       <option name="CSS_DECLARATION_BLOCK" value="false" />
       <option name="CSS_RULESET_LIST" value="false" />
       <option name="CSS" value="false" />
       <option name="JAVA_SCRIPT" value="false" />
       <option name="TypeScript" value="false" />
-      <option name="SQL" value="false" />
       <option name="PHP" value="true" />
       <option name="OTHER" value="false" />
     </context>
   </template>
-  <template name="inj" value="/**&#10; * @param $HINT$ $$$SERVICE$&#10; */&#10;public function inject$SERVICE_UPER$($HINT$ $$$SERVICE$)&#10;{&#10;    $this-&gt;$SERVICE$ = $$$SERVICE$;$END$&#10;}" description="inject function" toReformat="true" toShortenFQNames="true">
-    <variable name="SERVICE" expression="" defaultValue="" alwaysStopAt="true" />
-    <variable name="HINT" expression="classNameComplete()" defaultValue="" alwaysStopAt="true" />
-    <variable name="SERVICE_UPER" expression="capitalize(SERVICE)" defaultValue="" alwaysStopAt="false" />
+  <template name="inj" value="/**&#10; * @var $TYPE$&#10; * @inject&#10; */&#10;public $$$PROPERTY$;" description="@inject property" toReformat="true" toShortenFQNames="true">
+    <variable name="TYPE" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="PROPERTY" expression="" defaultValue="" alwaysStopAt="true" />
     <context>
       <option name="HTML_TEXT" value="false" />
       <option name="HTML" value="false" />
       <option name="XSL_TEXT" value="false" />
       <option name="XML" value="false" />
+      <option name="SQL" value="false" />
       <option name="CSS_PROPERTY_VALUE" value="false" />
       <option name="CSS_DECLARATION_BLOCK" value="false" />
       <option name="CSS_RULESET_LIST" value="false" />
       <option name="CSS" value="false" />
       <option name="JAVA_SCRIPT" value="false" />
       <option name="TypeScript" value="false" />
-      <option name="SQL" value="false" />
       <option name="PHP" value="true" />
       <option name="OTHER" value="false" />
     </context>
@@ -99,33 +97,32 @@
       <option name="HTML" value="false" />
       <option name="XSL_TEXT" value="false" />
       <option name="XML" value="false" />
+      <option name="SQL" value="false" />
       <option name="CSS_PROPERTY_VALUE" value="false" />
       <option name="CSS_DECLARATION_BLOCK" value="false" />
       <option name="CSS_RULESET_LIST" value="false" />
       <option name="CSS" value="false" />
       <option name="JAVA_SCRIPT" value="false" />
       <option name="TypeScript" value="false" />
-      <option name="SQL" value="false" />
       <option name="PHP" value="true" />
       <option name="OTHER" value="false" />
     </context>
   </template>
-  <template name="form" value="/**&#10; * @return $FORM_CLASS$&#10; */&#10;protected function createComponent$NAME$()&#10;{&#10;&#9;$$form = new $FORM_CLASS$();&#10;&#9;$END$&#10;&#10;    $$form-&gt;addSubmit(&quot;send&quot;, &quot;Odeslat&quot;);&#10;&#9;$$form-&gt;onSuccess[] = $this-&gt;$HANDLER$Succeeded;&#10;&#10;&#9;return $$form;&#10;}&#10;&#10;&#10;&#10;/**&#10; * @param $FORM_CLASS$ $$form&#10; */&#10;public function $HANDLER$Succeeded($FORM_CLASS$ $$form)&#10;{&#10;&#9;throw new Nette\NotImplementedException;&#10;}" description="Form component factory + handler" toReformat="false" toShortenFQNames="true">
+  <template name="form" value="/**&#10; * @return $FORM_CLASS$&#10; */&#10;protected function createComponent$NAME$()&#10;{&#10;&#9;$$form = new $FORM_CLASS$();&#10;&#9;$END$&#10;&#10;    $$form-&gt;addSubmit(&quot;send&quot;, &quot;Odeslat&quot;);&#10;&#9;$$form-&gt;onSuccess[] = function ($FORM_CLASS$ $$form) {&#10;&#9;&#9;throw new Nette\NotImplementedException;&#10;&#9;};&#10;&#10;&#9;return $$form;&#10;}&#10;" description="Form component factory + handler" toReformat="false" toShortenFQNames="true">
     <variable name="NAME" expression="" defaultValue="" alwaysStopAt="true" />
     <variable name="FORM_CLASS" expression="enum(&quot;Form&quot;, &quot;UI\\Form&quot;, &quot;Nette\\Application\\UI\\Form&quot;)" defaultValue="Form" alwaysStopAt="true" />
-    <variable name="HANDLER" expression="decapitalize(NAME)" defaultValue="" alwaysStopAt="false" />
     <context>
       <option name="HTML_TEXT" value="false" />
       <option name="HTML" value="false" />
       <option name="XSL_TEXT" value="false" />
       <option name="XML" value="false" />
+      <option name="SQL" value="false" />
       <option name="CSS_PROPERTY_VALUE" value="false" />
       <option name="CSS_DECLARATION_BLOCK" value="false" />
       <option name="CSS_RULESET_LIST" value="false" />
       <option name="CSS" value="false" />
       <option name="JAVA_SCRIPT" value="false" />
       <option name="TypeScript" value="false" />
-      <option name="SQL" value="false" />
       <option name="PHP" value="true" />
       <option name="OTHER" value="false" />
     </context>
@@ -138,13 +135,13 @@
       <option name="HTML" value="false" />
       <option name="XSL_TEXT" value="false" />
       <option name="XML" value="false" />
+      <option name="SQL" value="false" />
       <option name="CSS_PROPERTY_VALUE" value="false" />
       <option name="CSS_DECLARATION_BLOCK" value="false" />
       <option name="CSS_RULESET_LIST" value="false" />
       <option name="CSS" value="false" />
       <option name="JAVA_SCRIPT" value="false" />
       <option name="TypeScript" value="false" />
-      <option name="SQL" value="false" />
       <option name="PHP" value="true" />
       <option name="OTHER" value="false" />
     </context>
@@ -157,13 +154,13 @@
       <option name="HTML" value="false" />
       <option name="XSL_TEXT" value="false" />
       <option name="XML" value="false" />
+      <option name="SQL" value="false" />
       <option name="CSS_PROPERTY_VALUE" value="false" />
       <option name="CSS_DECLARATION_BLOCK" value="false" />
       <option name="CSS_RULESET_LIST" value="false" />
       <option name="CSS" value="false" />
       <option name="JAVA_SCRIPT" value="false" />
       <option name="TypeScript" value="false" />
-      <option name="SQL" value="false" />
       <option name="PHP" value="true" />
       <option name="OTHER" value="false" />
     </context>
@@ -176,13 +173,13 @@
       <option name="HTML" value="false" />
       <option name="XSL_TEXT" value="false" />
       <option name="XML" value="false" />
+      <option name="SQL" value="false" />
       <option name="CSS_PROPERTY_VALUE" value="false" />
       <option name="CSS_DECLARATION_BLOCK" value="false" />
       <option name="CSS_RULESET_LIST" value="false" />
       <option name="CSS" value="false" />
       <option name="JAVA_SCRIPT" value="false" />
       <option name="TypeScript" value="false" />
-      <option name="SQL" value="false" />
       <option name="PHP" value="true" />
       <option name="OTHER" value="false" />
     </context>
@@ -196,13 +193,13 @@
       <option name="HTML" value="false" />
       <option name="XSL_TEXT" value="false" />
       <option name="XML" value="false" />
+      <option name="SQL" value="false" />
       <option name="CSS_PROPERTY_VALUE" value="false" />
       <option name="CSS_DECLARATION_BLOCK" value="false" />
       <option name="CSS_RULESET_LIST" value="false" />
       <option name="CSS" value="false" />
       <option name="JAVA_SCRIPT" value="false" />
       <option name="TypeScript" value="false" />
-      <option name="SQL" value="false" />
       <option name="PHP" value="true" />
       <option name="OTHER" value="false" />
     </context>
@@ -215,13 +212,13 @@
       <option name="HTML" value="false" />
       <option name="XSL_TEXT" value="false" />
       <option name="XML" value="false" />
+      <option name="SQL" value="false" />
       <option name="CSS_PROPERTY_VALUE" value="false" />
       <option name="CSS_DECLARATION_BLOCK" value="false" />
       <option name="CSS_RULESET_LIST" value="false" />
       <option name="CSS" value="false" />
       <option name="JAVA_SCRIPT" value="false" />
       <option name="TypeScript" value="false" />
-      <option name="SQL" value="false" />
       <option name="PHP" value="true" />
       <option name="OTHER" value="false" />
     </context>
@@ -235,13 +232,13 @@
       <option name="HTML" value="false" />
       <option name="XSL_TEXT" value="false" />
       <option name="XML" value="false" />
+      <option name="SQL" value="false" />
       <option name="CSS_PROPERTY_VALUE" value="false" />
       <option name="CSS_DECLARATION_BLOCK" value="false" />
       <option name="CSS_RULESET_LIST" value="false" />
       <option name="CSS" value="false" />
       <option name="JAVA_SCRIPT" value="false" />
       <option name="TypeScript" value="false" />
-      <option name="SQL" value="false" />
       <option name="PHP" value="true" />
       <option name="OTHER" value="false" />
     </context>
@@ -254,16 +251,33 @@
       <option name="HTML" value="false" />
       <option name="XSL_TEXT" value="false" />
       <option name="XML" value="false" />
+      <option name="SQL" value="false" />
       <option name="CSS_PROPERTY_VALUE" value="false" />
       <option name="CSS_DECLARATION_BLOCK" value="false" />
       <option name="CSS_RULESET_LIST" value="false" />
       <option name="CSS" value="false" />
       <option name="JAVA_SCRIPT" value="false" />
       <option name="TypeScript" value="false" />
+      <option name="PHP" value="true" />
+      <option name="OTHER" value="false" />
+    </context>
+  </template>
+  <template name="ifa" value="interface I$NAME$Factory&#10;{&#10;&#9;/** @return $NAME$ */&#10;&#9;function create();&#10;}" description="interface component factory" toReformat="true" toShortenFQNames="true">
+    <variable name="NAME" expression="fileNameWithoutExtension()" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="HTML_TEXT" value="false" />
+      <option name="HTML" value="false" />
+      <option name="XSL_TEXT" value="false" />
+      <option name="XML" value="false" />
       <option name="SQL" value="false" />
+      <option name="CSS_PROPERTY_VALUE" value="false" />
+      <option name="CSS_DECLARATION_BLOCK" value="false" />
+      <option name="CSS_RULESET_LIST" value="false" />
+      <option name="CSS" value="false" />
+      <option name="JAVA_SCRIPT" value="false" />
+      <option name="TypeScript" value="false" />
       <option name="PHP" value="true" />
       <option name="OTHER" value="false" />
     </context>
   </template>
 </templateSet>
-

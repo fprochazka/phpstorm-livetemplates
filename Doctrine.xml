@@ -1,4 +1,3 @@
-<?xml version="1.0" encoding="UTF-8"?>
 <templateSet group="Doctrine">
   <template name="mtm" value="/**&#10; * @ORM\ManyToMany(targetEntity=&quot;$TYPE$&quot;, $COMPLETE$=&quot;$INVERSE_PROPERTY$&quot;$END$, cascade={&quot;persist&quot;})&#10; * @ORM\JoinTable(name=&quot;$TABLE_NAME$&quot;,&#10; * &#9;&#9;joinColumns={@ORM\JoinColumn(name=&quot;$JOIN_COL$_id&quot;, referencedColumnName=&quot;id&quot;)},&#10; * &#9;&#9;inverseJoinColumns={@ORM\JoinColumn(name=&quot;$INVERSE_COL$_id&quot;, referencedColumnName=&quot;id&quot;)} &#10; * &#9;)&#10; * @var $TYPE$[]|\Doctrine\Common\Collections\ArrayCollection&#10; */&#10;protected $$$PROPERTY$;" description="ManyToMany property" toReformat="true" toShortenFQNames="true">
     <variable name="PROPERTY" expression="" defaultValue="" alwaysStopAt="true" />
@@ -66,7 +65,7 @@
       <option name="OTHER" value="false" />
     </context>
   </template>
-  <template name="otm" value="/**&#10; * @ORM\OneToMany(targetEntity=&quot;$TYPE$&quot;, mappedBy=&quot;$OTHER_PROPERTY$&quot;$END$, cascade={&quot;persist&quot;})&#10; * @var $TYPE$&#10; */&#10;protected $$$PROPERTY$;" description="OneToMany property" toReformat="true" toShortenFQNames="true">
+  <template name="otm" value="/**&#10; * @ORM\OneToMany(targetEntity=&quot;$TYPE$&quot;, mappedBy=&quot;$OTHER_PROPERTY$&quot;$END$, cascade={&quot;persist&quot;})&#10; * @var $TYPE$[]|\Doctrine\Common\Collections\ArrayCollection&#10; */&#10;protected $$$PROPERTY$;" description="OneToMany property" toReformat="true" toShortenFQNames="true">
     <variable name="PROPERTY" expression="" defaultValue="" alwaysStopAt="true" />
     <variable name="TYPE" expression="classNameComplete()" defaultValue="" alwaysStopAt="true" />
     <variable name="OTHER_PROPERTY" expression="" defaultValue="" alwaysStopAt="true" />
@@ -103,24 +102,6 @@
       <option name="TypeScript" value="false" />
       <option name="PHP" value="true" />
       <option name="OTHER" value="false" />
-    </context>
-  </template>
-  <template name="@dao" value="@doctrine.dao($CLASS$)" description="Doctrine DAO definition" toReformat="true" toShortenFQNames="true">
-    <variable name="CLASS" expression="classNameComplete()" defaultValue="" alwaysStopAt="true" />
-    <context>
-      <option name="HTML_TEXT" value="false" />
-      <option name="HTML" value="false" />
-      <option name="XSL_TEXT" value="false" />
-      <option name="XML" value="false" />
-      <option name="SQL" value="false" />
-      <option name="CSS_PROPERTY_VALUE" value="false" />
-      <option name="CSS_DECLARATION_BLOCK" value="false" />
-      <option name="CSS_RULESET_LIST" value="false" />
-      <option name="CSS" value="false" />
-      <option name="JAVA_SCRIPT" value="false" />
-      <option name="TypeScript" value="false" />
-      <option name="PHP" value="false" />
-      <option name="OTHER" value="true" />
     </context>
   </template>
   <template name="sti" value="@ORM\InheritanceType(&quot;SINGLE_TABLE&quot;)&#10; * @ORM\DiscriminatorColumn(name=&quot;type&quot;, type=&quot;string&quot;, length=10)&#10; * @ORM\DiscriminatorMap({&#10; *    &quot;post&quot; = &quot;Post&quot;&#10; * })" description="Single table inheritance discriminator definition" toReformat="true" toShortenFQNames="true">
@@ -160,5 +141,22 @@
       <option name="OTHER" value="false" />
     </context>
   </template>
+  <template name="colb" value="/**&#10; * @ORM\Column(type=&quot;boolean&quot;, nullable=FALSE, options={&quot;default&quot;: 0})&#10; * @var bool&#10; */&#10;protected $$$PROPERTY$ = FALSE;$END$&#10;" description="Column property boolean type" toReformat="true" toShortenFQNames="true">
+    <variable name="PROPERTY" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="HTML_TEXT" value="false" />
+      <option name="HTML" value="false" />
+      <option name="XSL_TEXT" value="false" />
+      <option name="XML" value="false" />
+      <option name="SQL" value="false" />
+      <option name="CSS_PROPERTY_VALUE" value="false" />
+      <option name="CSS_DECLARATION_BLOCK" value="false" />
+      <option name="CSS_RULESET_LIST" value="false" />
+      <option name="CSS" value="false" />
+      <option name="JAVA_SCRIPT" value="false" />
+      <option name="TypeScript" value="false" />
+      <option name="PHP" value="true" />
+      <option name="OTHER" value="false" />
+    </context>
+  </template>
 </templateSet>
-

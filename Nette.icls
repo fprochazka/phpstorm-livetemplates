@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<templateSet group="Nette">
+  <template name="com" value="/**&#10; * @return $CLASS$&#10; */&#10;protected function createComponent$NAME$()&#10;{&#10;    return new $CLASS$($ARGS$);$END$&#10;}" description="component factory" toReformat="true" toShortenFQNames="true">
+    <variable name="CLASS" expression="classNameComplete()" defaultValue="" alwaysStopAt="true" />
+    <variable name="ARGS" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="NAME" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="PHP" value="true" />
+    </context>
+  </template>
+  <template name="sig" value="/***/&#10;public function handle$NAME$($PARAMS$)&#10;{&#10;    $END$&#10;}" description="signal factory" toReformat="true" toShortenFQNames="true">
+    <variable name="NAME" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="PARAMS" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="PHP" value="true" />
+    </context>
+  </template>
+  <template name="att" value="/**&#10; * @param \Nette\ComponentModel\Container $obj&#10; */&#10;protected function attached($obj)&#10;{&#10;&#9;parent::attached($obj);&#10;&#10;&#9;if (!$obj instanceof \Nette\Application\UI\Presenter) {&#10;&#9;&#9;return;&#10;&#9;}&#10;&#10;&#9;$END$&#10;}" description="component attached event" toReformat="true" toShortenFQNames="true">
+    <context>
+      <option name="PHP" value="true" />
+    </context>
+  </template>
+  <template name="obj" value="&#9;/*************************** Nette\Object ***************************/&#10;&#10;&#10;&#10;&#9;/**&#10;&#9; * Access to reflection.&#10;&#9; * @return \Nette\Reflection\ClassType&#10;&#9; */&#10;&#9;public static function getReflection()&#10;&#9;{&#10;&#9;&#9;return new Nette\Reflection\ClassType(get_called_class());&#10;&#9;}&#10;&#10;&#10;&#10;&#9;/**&#10;&#9; * Call to undefined method.&#10;&#9; *&#10;&#9; * @param string $name&#10;&#9; * @param array $args&#10;&#9; *&#10;&#9; * @throws \Nette\MemberAccessException&#10;&#9; * @return mixed&#10;&#9; */&#10;&#9;public function __call($name, $args)&#10;&#9;{&#10;&#9;&#9;return Nette\ObjectMixin::call($this, $name, $args);&#10;&#9;}&#10;&#10;&#10;&#10;&#9;/**&#10;&#9; * Call to undefined static method.&#10;&#9; *&#10;&#9; * @param string $name&#10;&#9; * @param array $args&#10;&#9; *&#10;&#9; * @throws \Nette\MemberAccessException&#10;&#9; * @return mixed&#10;&#9; */&#10;&#9;public static function __callStatic($name, $args)&#10;&#9;{&#10;&#9;&#9;return Nette\ObjectMixin::callStatic(get_called_class(), $name, $args);&#10;&#9;}&#10;&#10;&#10;&#10;&#9;/**&#10;&#9; * Adding method to class.&#10;&#9; *&#10;&#9; * @param $name&#10;&#9; * @param null $callback&#10;&#9; *&#10;&#9; * @throws \Nette\MemberAccessException&#10;&#9; * @return callable|null&#10;&#9; */&#10;&#9;public static function extensionMethod($name, $callback = NULL)&#10;&#9;{&#10;&#9;&#9;if (strpos($name, '::') === FALSE) {&#10;&#9;&#9;&#9;$class = get_called_class();&#10;&#9;&#9;} else {&#10;&#9;&#9;&#9;list($class, $name) = explode('::', $name);&#10;&#9;&#9;}&#10;&#9;&#9;if ($callback === NULL) {&#10;&#9;&#9;&#9;return Nette\ObjectMixin::getExtensionMethod($class, $name);&#10;&#9;&#9;} else {&#10;&#9;&#9;&#9;Nette\ObjectMixin::setExtensionMethod($class, $name, $callback);&#10;&#9;&#9;}&#10;&#9;}&#10;&#10;&#10;&#10;&#9;/**&#10;&#9; * Returns property value. Do not call directly.&#10;&#9; *&#10;&#9; * @param string $name&#10;&#9; *&#10;&#9; * @throws \Nette\MemberAccessException&#10;&#9; * @return mixed&#10;&#9; */&#10;&#9;public function &amp;__get($name)&#10;&#9;{&#10;&#9;&#9;return Nette\ObjectMixin::get($this, $name);&#10;&#9;}&#10;&#10;&#10;&#10;&#9;/**&#10;&#9; * Sets value of a property. Do not call directly.&#10;&#9; *&#10;&#9; * @param string $name&#10;&#9; * @param mixed $value&#10;&#9; *&#10;&#9; * @throws \Nette\MemberAccessException&#10;&#9; * @return void&#10;&#9; */&#10;&#9;public function __set($name, $value)&#10;&#9;{&#10;&#9;&#9;Nette\ObjectMixin::set($this, $name, $value);&#10;&#9;}&#10;&#10;&#10;&#10;&#9;/**&#10;&#9; * Is property defined?&#10;&#9; *&#10;&#9; * @param string $name&#10;&#9; *&#10;&#9; * @return bool&#10;&#9; */&#10;&#9;public function __isset($name)&#10;&#9;{&#10;&#9;&#9;return Nette\ObjectMixin::has($this, $name);&#10;&#9;}&#10;&#10;&#10;&#10;&#9;/**&#10;&#9; * Access to undeclared property.&#10;&#9; *&#10;&#9; * @param string $name&#10;&#9; *&#10;&#9; * @throws \Nette\MemberAccessException&#10;&#9; * @return void&#10;&#9; */&#10;&#9;public function __unset($name)&#10;&#9;{&#10;&#9;&#9;Nette\ObjectMixin::remove($this, $name);&#10;&#9;}" description="Nette\Object mixin" toReformat="true" toShortenFQNames="true">
+    <context>
+      <option name="PHP" value="true" />
+    </context>
+  </template>
+  <template name="inj" value="/**&#10; * @param $HINT$ $$$SERVICE$&#10; */&#10;public function inject$SERVICE_UPER$($HINT$ $$$SERVICE$)&#10;{&#10;    $this-&gt;$SERVICE$ = $$$SERVICE$;$END$&#10;}" description="inject function" toReformat="true" toShortenFQNames="true">
+    <variable name="SERVICE" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="HINT" expression="classNameComplete()" defaultValue="" alwaysStopAt="true" />
+    <variable name="SERVICE_UPER" expression="capitalize(SERVICE)" defaultValue="" alwaysStopAt="false" />
+    <context>
+      <option name="PHP" value="true" />
+    </context>
+  </template>
+  <template name="sup" value="protected function startup()&#10;{&#10;    parent::startup();&#10;&#10;    $END$&#10;}" description="startup method" toReformat="true" toShortenFQNames="true">
+    <context>
+      <option name="PHP" value="true" />
+    </context>
+  </template>
+  <template name="form" value="/**&#10; * @return $FORM_CLASS$&#10; */&#10;protected function createComponent$NAME$()&#10;{&#10;&#9;$$form = new $FORM_CLASS$();&#10;&#9;$END$&#10;&#10;    $$form-&gt;addSubmit(&quot;send&quot;, &quot;Odeslat&quot;);&#10;&#9;$$form-&gt;onSuccess[] = $this-&gt;$HANDLER$Succeeded;&#10;&#10;&#9;return $$form;&#10;}&#10;&#10;&#10;&#10;/**&#10; * @param $FORM_CLASS$ $$form&#10; */&#10;public function $HANDLER$Succeeded($FORM_CLASS$ $$form)&#10;{&#10;&#9;throw new Nette\NotImplementedException;&#10;}" description="Form component factory + handler" toReformat="false" toShortenFQNames="true">
+    <variable name="NAME" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="FORM_CLASS" expression="enum(&quot;Form&quot;, &quot;UI\\Form&quot;, &quot;Nette\\Application\\UI\\Form&quot;)" defaultValue="Form" alwaysStopAt="true" />
+    <variable name="HANDLER" expression="decapitalize(NAME)" defaultValue="" alwaysStopAt="false" />
+    <context>
+      <option name="PHP" value="true" />
+    </context>
+  </template>
+  <template name="ren" value="public function render$VIEW$($PARAMS$)&#10;{&#10;&#9;$END$&#10;}" description="Render method" toReformat="false" toShortenFQNames="true">
+    <variable name="VIEW" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="PARAMS" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="PHP" value="true" />
+    </context>
+  </template>
+  <template name="act" value="public function action$ACTION$($PARAMS$)&#10;{&#10;&#9;$END$&#10;}" description="Action method" toReformat="false" toShortenFQNames="true">
+    <variable name="ACTION" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="PARAMS" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="PHP" value="true" />
+    </context>
+  </template>
+</templateSet>
+
