@@ -159,4 +159,18 @@
       <option name="OTHER" value="false" />
     </context>
   </template>
+  <template name="qof" value="$this-&gt;filter[$KEY$] = function (QueryBuilder $qb) $IMPORT$ {&#10;&#9;$SELECTION$$END$&#10;};" description="QueryObject filter" toReformat="true" toShortenFQNames="true">
+    <variable name="KEY" expression="" defaultValue="__FUNCTION__" alwaysStopAt="true" />
+    <variable name="IMPORT" expression="" defaultValue="use ()" alwaysStopAt="true" />
+    <context>
+      <option name="PHP" value="true" />
+    </context>
+  </template>
+  <template name="qos" value="$this-&gt;select[$KEY$] = function (QueryBuilder $qb) $IMPORT$ {&#10;&#9;$SELECTION$$END$&#10;};" description="QueryObject select" toReformat="true" toShortenFQNames="true">
+    <variable name="KEY" expression="" defaultValue="__FUNCTION__" alwaysStopAt="true" />
+    <variable name="IMPORT" expression="" defaultValue="use ()" alwaysStopAt="true" />
+    <context>
+      <option name="PHP" value="true" />
+    </context>
+  </template>
 </templateSet>
