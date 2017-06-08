@@ -87,7 +87,7 @@
   </template>
   <template name="col" value="/**&#10; * @ORM\Column(type=&quot;$TYPE$&quot;, nullable=TRUE)&#10; * @var $TYPE$$END$&#10; */&#10;protected $$$PROPERTY$;" description="Column property" toReformat="true" toShortenFQNames="true">
     <variable name="PROPERTY" expression="" defaultValue="" alwaysStopAt="true" />
-    <variable name="TYPE" expression="enum(&quot;string&quot;, &quot;integer&quot;, &quot;smallint&quot;, &quot;bigint&quot;, &quot;boolean&quot;, &quot;decimalm date&quot;, &quot;time&quot;, &quot;datetime&quot;, &quot;datetimetz&quot;, &quot;text&quot;, &quot;object&quot;, &quot;array&quot;, &quot;simple_array&quot;, &quot;json_array&quot;, &quot;float&quot;, &quot;guid&quot;, &quot;blob&quot;)" defaultValue="string" alwaysStopAt="true" />
+    <variable name="TYPE" expression="enum(&quot;string&quot;, &quot;integer&quot;, &quot;smallint&quot;, &quot;bigint&quot;, &quot;boolean&quot;, &quot;decimal&quot;, &quot;date&quot;, &quot;time&quot;, &quot;datetime&quot;, &quot;datetimetz&quot;, &quot;text&quot;, &quot;object&quot;, &quot;array&quot;, &quot;simple_array&quot;, &quot;json_array&quot;, &quot;float&quot;, &quot;guid&quot;, &quot;blob&quot;)" defaultValue="string" alwaysStopAt="true" />
     <context>
       <option name="HTML_TEXT" value="false" />
       <option name="HTML" value="false" />

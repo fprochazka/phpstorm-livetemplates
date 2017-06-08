@@ -1,0 +1,13 @@
+<templateSet group="SQL">
+  <template name="delus" value="delete from $module$.$table_name$ using $used_table_name$ $used_table_name_alias$ where $table_name$.$fk_value$ = $used_table_name_alias$.$id$ and $END$;" description="delete values in a table using another table" toReformat="true" toShortenFQNames="false">
+    <variable name="module" expression="complete()" defaultValue="" alwaysStopAt="true" />
+    <variable name="table_name" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="used_table_name" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="used_table_name_alias" expression="" defaultValue="a" alwaysStopAt="true" />
+    <variable name="fk_value" expression="complete()" defaultValue="" alwaysStopAt="true" />
+    <variable name="id" expression="complete()" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="SQL" value="true" />
+    </context>
+  </template>
+</templateSet>
