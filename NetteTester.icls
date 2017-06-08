@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<templateSet group="NetteTester">
+  <template name="ass" value="Assert::$METHOD$;$END$" description="Assert" toReformat="true" toShortenFQNames="true">
+    <variable name="METHOD" expression="complete()" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="PHP" value="true" />
+    </context>
+  </template>
+  <template name="asss" value="Assert::$METHOD$($SELECTION$);$END$" description="Assert Surround" toReformat="true" toShortenFQNames="true">
+    <variable name="METHOD" expression="complete()" defaultValue="" alwaysStopAt="true" />
+    <variable name="SELECTION" expression="" defaultValue="" alwaysStopAt="false" />
+    <context>
+      <option name="PHP" value="true" />
+    </context>
+  </template>
+</templateSet>
+

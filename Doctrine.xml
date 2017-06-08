@@ -8,7 +8,19 @@
     <variable name="INVERSE_COL" expression="" defaultValue="" alwaysStopAt="true" />
     <variable name="TABLE_NAME" expression="" defaultValue="" alwaysStopAt="true" />
     <context>
+      <option name="HTML_TEXT" value="false" />
+      <option name="HTML" value="false" />
+      <option name="XSL_TEXT" value="false" />
+      <option name="XML" value="false" />
+      <option name="SQL" value="false" />
+      <option name="CSS_PROPERTY_VALUE" value="false" />
+      <option name="CSS_DECLARATION_BLOCK" value="false" />
+      <option name="CSS_RULESET_LIST" value="false" />
+      <option name="CSS" value="false" />
+      <option name="JAVA_SCRIPT" value="false" />
+      <option name="TypeScript" value="false" />
       <option name="PHP" value="true" />
+      <option name="OTHER" value="false" />
     </context>
   </template>
   <template name="oto" value="/**&#10; * @ORM\OneToOne(targetEntity=&quot;$TYPE$&quot;, $COMPLETE$=&quot;$INVERSE_PROPERTY$&quot;$END$, cascade={&quot;persist&quot;})&#10; * @ORM\JoinColumn(name=&quot;$PROPERTY$_id&quot;, referencedColumnName=&quot;id&quot;)&#10; * @var $TYPE$&#10; */&#10;protected $$$PROPERTY$;" description="OneToOne property" toReformat="true" toShortenFQNames="true">
@@ -17,7 +29,19 @@
     <variable name="COMPLETE" expression="enum(&quot;inversedBy&quot;, &quot;mappedBy&quot;)" defaultValue="inversedBy" alwaysStopAt="true" />
     <variable name="INVERSE_PROPERTY" expression="" defaultValue="" alwaysStopAt="true" />
     <context>
+      <option name="HTML_TEXT" value="false" />
+      <option name="HTML" value="false" />
+      <option name="XSL_TEXT" value="false" />
+      <option name="XML" value="false" />
+      <option name="SQL" value="false" />
+      <option name="CSS_PROPERTY_VALUE" value="false" />
+      <option name="CSS_DECLARATION_BLOCK" value="false" />
+      <option name="CSS_RULESET_LIST" value="false" />
+      <option name="CSS" value="false" />
+      <option name="JAVA_SCRIPT" value="false" />
+      <option name="TypeScript" value="false" />
       <option name="PHP" value="true" />
+      <option name="OTHER" value="false" />
     </context>
   </template>
   <template name="mto" value="/**&#10; * @ORM\ManyToOne(targetEntity=&quot;$TYPE$&quot;, inversedBy=&quot;$OTHER_PROPERTY$&quot;$END$, cascade={&quot;persist&quot;})&#10; * @ORM\JoinColumn(name=&quot;$COL$_id&quot;, referencedColumnName=&quot;id&quot;)&#10; * @var $TYPE$&#10; */&#10;protected $$$PROPERTY$;" description="ManyToOne property" toReformat="true" toShortenFQNames="true">
@@ -26,7 +50,19 @@
     <variable name="COL" expression="" defaultValue="" alwaysStopAt="true" />
     <variable name="OTHER_PROPERTY" expression="" defaultValue="" alwaysStopAt="true" />
     <context>
+      <option name="HTML_TEXT" value="false" />
+      <option name="HTML" value="false" />
+      <option name="XSL_TEXT" value="false" />
+      <option name="XML" value="false" />
+      <option name="SQL" value="false" />
+      <option name="CSS_PROPERTY_VALUE" value="false" />
+      <option name="CSS_DECLARATION_BLOCK" value="false" />
+      <option name="CSS_RULESET_LIST" value="false" />
+      <option name="CSS" value="false" />
+      <option name="JAVA_SCRIPT" value="false" />
+      <option name="TypeScript" value="false" />
       <option name="PHP" value="true" />
+      <option name="OTHER" value="false" />
     </context>
   </template>
   <template name="otm" value="/**&#10; * @ORM\OneToMany(targetEntity=&quot;$TYPE$&quot;, mappedBy=&quot;$OTHER_PROPERTY$&quot;$END$, cascade={&quot;persist&quot;})&#10; * @var $TYPE$[]|\Doctrine\Common\Collections\ArrayCollection&#10; */&#10;protected $$$PROPERTY$;" description="OneToMany property" toReformat="true" toShortenFQNames="true">
@@ -34,31 +70,93 @@
     <variable name="TYPE" expression="classNameComplete()" defaultValue="" alwaysStopAt="true" />
     <variable name="OTHER_PROPERTY" expression="" defaultValue="" alwaysStopAt="true" />
     <context>
+      <option name="HTML_TEXT" value="false" />
+      <option name="HTML" value="false" />
+      <option name="XSL_TEXT" value="false" />
+      <option name="XML" value="false" />
+      <option name="SQL" value="false" />
+      <option name="CSS_PROPERTY_VALUE" value="false" />
+      <option name="CSS_DECLARATION_BLOCK" value="false" />
+      <option name="CSS_RULESET_LIST" value="false" />
+      <option name="CSS" value="false" />
+      <option name="JAVA_SCRIPT" value="false" />
+      <option name="TypeScript" value="false" />
       <option name="PHP" value="true" />
+      <option name="OTHER" value="false" />
     </context>
   </template>
   <template name="col" value="/**&#10; * @ORM\Column(type=&quot;$TYPE$&quot;, nullable=TRUE)&#10; * @var $TYPE$$END$&#10; */&#10;protected $$$PROPERTY$;" description="Column property" toReformat="true" toShortenFQNames="true">
     <variable name="PROPERTY" expression="" defaultValue="" alwaysStopAt="true" />
     <variable name="TYPE" expression="enum(&quot;string&quot;, &quot;integer&quot;, &quot;smallint&quot;, &quot;bigint&quot;, &quot;boolean&quot;, &quot;decimal&quot;, &quot;date&quot;, &quot;time&quot;, &quot;datetime&quot;, &quot;datetimetz&quot;, &quot;text&quot;, &quot;object&quot;, &quot;array&quot;, &quot;simple_array&quot;, &quot;json_array&quot;, &quot;float&quot;, &quot;guid&quot;, &quot;blob&quot;)" defaultValue="string" alwaysStopAt="true" />
     <context>
+      <option name="HTML_TEXT" value="false" />
+      <option name="HTML" value="false" />
+      <option name="XSL_TEXT" value="false" />
+      <option name="XML" value="false" />
+      <option name="SQL" value="false" />
+      <option name="CSS_PROPERTY_VALUE" value="false" />
+      <option name="CSS_DECLARATION_BLOCK" value="false" />
+      <option name="CSS_RULESET_LIST" value="false" />
+      <option name="CSS" value="false" />
+      <option name="JAVA_SCRIPT" value="false" />
+      <option name="TypeScript" value="false" />
       <option name="PHP" value="true" />
+      <option name="OTHER" value="false" />
     </context>
   </template>
   <template name="sti" value="@ORM\InheritanceType(&quot;SINGLE_TABLE&quot;)&#10; * @ORM\DiscriminatorColumn(name=&quot;type&quot;, type=&quot;string&quot;, length=10)&#10; * @ORM\DiscriminatorMap({&#10; *    &quot;post&quot; = &quot;Post&quot;&#10; * })" description="Single table inheritance discriminator definition" toReformat="true" toShortenFQNames="true">
     <context>
+      <option name="HTML_TEXT" value="false" />
+      <option name="HTML" value="false" />
+      <option name="XSL_TEXT" value="false" />
+      <option name="XML" value="false" />
+      <option name="SQL" value="false" />
+      <option name="CSS_PROPERTY_VALUE" value="false" />
+      <option name="CSS_DECLARATION_BLOCK" value="false" />
+      <option name="CSS_RULESET_LIST" value="false" />
+      <option name="CSS" value="false" />
+      <option name="JAVA_SCRIPT" value="false" />
+      <option name="TypeScript" value="false" />
+      <option name="PHP" value="false" />
       <option name="PHP Comment" value="true" />
+      <option name="OTHER" value="false" />
     </context>
   </template>
   <template name="ent" value="@ORM\Entity()&#10; * @ORM\Table(name=&quot;$TABLE_NAME$&quot;)" description="Entity header" toReformat="true" toShortenFQNames="true">
     <variable name="TABLE_NAME" expression="" defaultValue="" alwaysStopAt="true" />
     <context>
+      <option name="HTML_TEXT" value="false" />
+      <option name="HTML" value="false" />
+      <option name="XSL_TEXT" value="false" />
+      <option name="XML" value="false" />
+      <option name="SQL" value="false" />
+      <option name="CSS_PROPERTY_VALUE" value="false" />
+      <option name="CSS_DECLARATION_BLOCK" value="false" />
+      <option name="CSS_RULESET_LIST" value="false" />
+      <option name="CSS" value="false" />
+      <option name="JAVA_SCRIPT" value="false" />
+      <option name="TypeScript" value="false" />
+      <option name="PHP" value="false" />
       <option name="PHP Comment" value="true" />
+      <option name="OTHER" value="false" />
     </context>
   </template>
   <template name="colb" value="/**&#10; * @ORM\Column(type=&quot;boolean&quot;, nullable=FALSE, options={&quot;default&quot;: 0})&#10; * @var bool&#10; */&#10;protected $$$PROPERTY$ = FALSE;$END$&#10;" description="Column property boolean type" toReformat="true" toShortenFQNames="true">
     <variable name="PROPERTY" expression="" defaultValue="" alwaysStopAt="true" />
     <context>
+      <option name="HTML_TEXT" value="false" />
+      <option name="HTML" value="false" />
+      <option name="XSL_TEXT" value="false" />
+      <option name="XML" value="false" />
+      <option name="SQL" value="false" />
+      <option name="CSS_PROPERTY_VALUE" value="false" />
+      <option name="CSS_DECLARATION_BLOCK" value="false" />
+      <option name="CSS_RULESET_LIST" value="false" />
+      <option name="CSS" value="false" />
+      <option name="JAVA_SCRIPT" value="false" />
+      <option name="TypeScript" value="false" />
       <option name="PHP" value="true" />
+      <option name="OTHER" value="false" />
     </context>
   </template>
   <template name="qof" value="$this-&gt;filter[$KEY$] = function (QueryBuilder $qb) $IMPORT$ {&#10;&#9;$SELECTION$$END$&#10;};" description="QueryObject filter" toReformat="true" toShortenFQNames="true">
