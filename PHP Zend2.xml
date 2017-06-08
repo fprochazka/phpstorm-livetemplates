@@ -1,0 +1,8 @@
+<templateSet group="PHP Zend2">
+  <template name="cact" value="public function $NAME$Action(){&#10;    $END$&#10;}" description="Controller action" toReformat="true" toShortenFQNames="true">
+    <variable name="NAME" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="PHP" value="true" />
+    </context>
+  </template>
+</templateSet>
